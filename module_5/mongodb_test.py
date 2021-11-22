@@ -4,4 +4,6 @@ url = "mongodb+srv://admin:admin@cluster0.duvph.mongodb.net/Cluster0?retryWrites
 client = MongoClient(url)
 db = client.pytech
 
-print(db.list_collection_names)
+print("-- Pytech Collection List --")
+for coll in db.list_collection_names():
+    print(coll)
