@@ -7,17 +7,20 @@ students = db["students"]
 
 john = {
     "student_id" : 1007,
-    "first_name" : "John" 
+    "first_name" : "John",
+    "last_name" : "Smith" 
 }
 
 jane = {
     "student_id" : 1008,
-    "first_name" : "Jane"
+    "first_name" : "Jane",
+    "last_name" : "Doe"
 }
 
 josh = {
     "student_id" : 1009,
-    "first_name" : "Josh"
+    "first_name" : "Josh",
+    "last_name" : "Miller"
 }
 
 john_student_id = students.insert_one(john).inserted_id
