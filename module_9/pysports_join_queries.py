@@ -16,12 +16,18 @@ try:
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM team;")
+    cursor.execute("SELECT player_id, first_name, last_name, team_name FROM players INNER JOIN team ON players.team_id = team.team_id;")
 
-    teams = cursor.fetchall()
+    player = cursor.fetchall()
 
-    for team in teams:
-        print("Team Name: {}".format(team[1]))
+    print("-- DISPLAYING PLAYER RECORDS --")
+
+    for players in player:
+        print("Player ID: {}".format(players[0]))
+        print("First Name: {}".format(players[1]))
+        print("Last Name: {}".format(players[2]))
+        print("Team Name: {}".format(players[3]))
+        print("")
     
     input("\n\n Press any key to continue...")
 
